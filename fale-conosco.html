@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--obrigatorio-->
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <!--conjunto de caracteres da regiao-->
+        <title>Tudo Sobre o Google Glass</title>
+        <!--titulo da pagina-->
+        <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="_css/form.css">
+        <!--<link rel="stylesheet" href="_css/estilo.css">-->       
+<!--  <style>
+        "tag" {
+        text-align: justify;
+        text-indent: 30px;
+        color: blue;
+        text-shadow: 4px,4px,4px red;
+        text-decoration: underline;
+    }
+      </style>
+configuracao de estilo dentro do html usando uma tag "<p style="...">"contexto"</p> (nao recomendado)-->
+ </head>
+    <script language="javascript" src="_javascript/funcoes.js"></script>
+    <script>
+        function calc_total(){
+            var qtd = parseInt(document.getElementById('cQtd').value);
+            var tot = qtd * 1500;
+            document.getElementById('cTot').value = tot;
+        }
+    </script>
+    <!-- <script>
+        function mudaFoto(foto) {
+            document.getElementById("logo").src = foto; 
+        }
+    </script> -->
+ <body> 
+<!--corpo do contexto/pagina-->
+    <div id="interface"> 
+    <!--Corpo principal dapagina.-->
+<header id="cabecalho">
+    <!--Criar um cabeçalho para pagina.-->
+    <hgroup>
+    <!--Agrupar contexto-->
+        <h1> Google Glass </h1>
+        <!--titulos e subtitulos em hierarquia h1,h2,h3,h4,h5,h6-->
+        <h2> revolução do Google está chegando </h2>
+    </hgroup> 
+<img src="_imagens/contato.png" id="logo"/>
+<!--buscarde imagens a serem exibidas-->
+<nav id="menu"> 
+    <!--criar uma area de navegação-->
+    <h1>Menu Principal</h1>
+    <ul type="circle"> <!--type="square,disc,circle"-->
+    <!--<ol type="1,a,A,i" start="1,2,3,4..." lista ordenada-->
+        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+            <!-- "href=" coloca contexto como um link-->
+        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+            <!-- "href" coloca contexto como um link-->
+        <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+            <!-- "href" coloca contexto como um link-->
+        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+           <!-- <ul>
+                <li>musicas</li>   //sublistas dentro de uma lista//
+                <li>videos</li>
+            </ul>-->
+        <li onmouseover="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+    </ul>
+</nav>
+</header>
+<section id="corpo-full">
+    <article id="noticia_principal">
+        <header id="cabecalho_artigo">
+            <hgroup>
+            <!--Agrupar contexto-->
+                <h3>Fale Conosco > Contato</h3>
+                <!--titulos e subtitulos em hierarquia h1,h2,h3,h4,h5,h6-->
+                <h1>Formulário de Contato </h1>
+                <h2>por Gustavo Guanabara </h2>
+                <h3 class="direita"> Atualizado em 01/Maio/2013 </h3>
+            </hgroup>
+        </header>
+
+<form method="POST" id="fContato" action="mailto:contato@gmail.com" oninput="calc_total();"> 
+    <!--"method='get' é mais rapido e menos seguro-->
+    <!--"method='post' é mais lento porem mais seguro-->
+    <!--"action='mailto:contato@gmail.com' envia o formulario ao e-mail-->
+ 
+    <fieldset id="usuario"> 
+        <legend>Identificação do Usuário</legend>
+    <p>Nome: <input type="text" name="tName" id="cName" size="50" maxlength="60" placeholder="Nome Completo"></p>
+    <p>Senha: <input type="password" name="tSenha" id="cSenha" size="8" maxlength="6" placeholder="6 digitos"></p>
+    <p>E-mail: <input type="email" name="tMail" id="cMail" size="50" maxlength="100" placeholder=" E-mail"></p>
+    
+    <fieldset id="sexo">
+        <legend>Sexo:</legend>
+            <input type="radio" name="tSexo" id="cMasc" checked><label for="cMasc" >Masculino</label></imput><br>
+            <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label></input>
+    </fieldset>
+    <p>Data de Nascimento: <input type="date" name="tNasc" id="cNasc"></p>
+    </fieldset>
+
+<fieldset id="endereco">
+    <legend>Endereço do Usuário</legend>
+    <p>Logradouro: <input type="text" name="tRua" id="cRua" size="50" maxlength="80" placeholder="Rua, Quadra, Lote..."> </p>
+    <p>Número: <input type="number" name="tNum" id="cNum" min="0" max="9999" placeholder="0"></p>
+    <p><label for="cEst">Estado:</label> 
+<select name="tEst" id="cEst">
+        <option>RJ</option>
+        <option>SP</option>
+        <option>MG</option>
+        <option selected>GO</option>
+        <option>DF</option>
+        <option>TO</option>
+        <option>BA</option>
+        <option>CE</option>
+        <option>PI</option>
+        <option>AC</option>
+        <option>ES</option>
+</select></p>
+    <p><label for="cCid">Cidade:</label>
+    <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
+<datalist id="cidades">    
+        <option value="Rio Branco"></option>
+        <option value="Rio de Janeiro"></option>
+        <option value="São Paulo"></option>
+        <option value="Minas Gerais"></option>
+        <option value="Vitória"></option>
+        <option value="Goiânia"></option>
+        <option value="Distrito Federal"></option>
+        <option value="Palmas"></option>
+        <option value="Vitória"></option>
+        <option value="Porto Seguro"></option>
+         <option value="Fortaleza"></option>
+         <option value="Terezina"></option>
+    </datalist>
+</fieldset>
+
+<fieldset id="mensagem">
+    <legend>Mensagem do Usuário</legend>
+    <p><label for="cUrg"> de Urgência:</label>
+    Min <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"> Max</p>
+    <p><label for="cMsg">Mensagem:</label>
+        <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Digite sua mensagem!"></textarea></p>
+</fieldset>
+
+<fieldset id="pedido">
+    <legend>Quero um Google Glass</legend>
+    <p> <input type="checkbox" name="tPed" id="cPed" checked>
+        <label for="cPed">"Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p><label for="cCor">Cor:</label></label>
+    <input type="color" name="tCor" id="cCor" value="#0000FF"></p>
+    <p><label for="cQtd">Quantidade:</label>
+    <input type="number" name="tNum" id="cNum" min="0" max="10" value="0"></p>
+    <p><label for="cTot"> "Preço Total: R$ </label></label>
+    <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly></p>
+</fieldset>
+
+<!--<input type="submit" value="Enviar"><br/> <br/> -->
+    <input type="image" src="_imagens/botao-enviar.png" id="botao">
+</form>
+
+</section>
+
+<footer id="rodape"> 
+    <!-- definir conteudo da  tag como rodape. -->
+Copyright 2013 - by Gustavo Guanabara </br>
+
+<a href="http://facebook.com/cursosemvideo" target="_blank">Facebook</a> | <a href="http://twitter.com/cursosemvideo"target="_blank">Twitter</a>
+            <!-- "href" coloca contexto como um link-->
+            <!-- "_blank" abre o link em uma nova aba-->
+</footer>
+    </body>
+</html>

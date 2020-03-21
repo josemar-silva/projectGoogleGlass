@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--obrigatorio-->
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <!--conjunto de caracteres da regiao-->
+        <title>Tudo Sobre o Google Glass</title>
+        <!--titulo da pagina-->
+        <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+        <!--<link rel="stylesheet" href="_css/estilo.css">-->
+        
+<!--  <style>
+        "tag" {
+        text-align: justify;
+        text-indent: 30px;
+        color: blue;
+        text-shadow: 4px,4px,4px red;
+        text-decoration: underline;
+    }
+      </style>
+configuracao de estilo dentro do html usando uma tag "<p style="...">"contexto"</p> (nao recomendado)-->
+    
+    </head>
+
+    <script language="javascript" src="_javascript/funcoes.js"></script>
+    <!-- <script>
+        function mudaFoto(foto) {
+            document.getElementById("logo").src = foto; 
+        }
+    </script> -->
+
+ <body> 
+<!--corpo do contexto/pagina-->
+    <div id="interface"> 
+    <!--Corpo principal dapagina.-->
+<header id="cabecalho">
+    <!--Criar um cabeçalho para pagina.-->
+    <hgroup>
+    <!--Agrupar contexto-->
+        <h1> Google Glass </h1>
+        <!--titulos e subtitulos em hierarquia h1,h2,h3,h4,h5,h6-->
+        <h2> revolução do Google está chegando </h2>
+    </hgroup> 
+<img src="_imagens/glass-oculos-preto-peq.png" id="logo"/>
+<!--buscarde imagens a serem exibidas-->
+<nav id="menu"> 
+    <!--criar uma area de navegação-->
+    <h1>Menu Principal</h1>
+    <ul type="circle"> <!--type="square,disc,circle"-->
+    <!--<ol type="1,a,A,i" start="1,2,3,4..." lista ordenada-->
+        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="index.html">Home</a></li>
+            <!-- "href=" coloca contexto como um link-->
+        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="specs.html">Especificações</a></li>
+            <!-- "href" coloca contexto como um link-->
+        <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fotos.html">Fotos</a></li>
+            <!-- "href" coloca contexto como um link-->
+        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="multimidia.html">Multimídia</a></li>
+           <!-- <ul>
+                <li>musicas</li>   //sublistas dentro de uma lista//
+                <li>videos</li>
+            </ul>-->
+        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+    </ul>
+</nav>
+</header>
+    <section id="corpo">
+        <article id="noticia_principal">
+    <header id="cabecalho_artigo">
+        <hgroup>
+        <!--Agrupar contexto-->
+            <h3>Tecnologia > Inovações</h3>
+            <!--titulos e subtitulos em hierarquia h1,h2,h3,h4,h5,h6-->
+            <h1> Saiba tudo sobre o Google Glass </h1>
+            <h2> por Gustavo Guanabara </h2>
+            <h3 class="direita"> Atualizado em 23/Abril/2013 </h3>
+        </hgroup>
+    </header>
+<h2> O que é </h2>
+    <p> O Google Glass é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de <a href="https://www.google.com/glass" target="_blank">Project Glass</a>, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar vídeoconferências. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o Google Glass encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.</p>
+<!-- Na tag <a href="..." o parametro target="..." pode ter o valor "_blank ou _self"-->
+<figure class="foto_legenda">
+<!--dar enfase semantica a figura/imagem do contexto-->
+    <img src="_imagens/glass-quadro-homem-mulher.jpg"/>
+        <!-- "img src=" selecionar uma imageem a ser apresentada-->
+    <figcaption>
+        <!--dar legenda a imagem/fugura.-->
+            <h3> Google Glass</h3>
+            <!-- definir conteudo da  tag como um titulo ou subtitulo. -->
+            <p> Uma Nova Maneira de Ver o Mundo! </p>
+            <!-- colocar conteudo em um paragrafo. -->
+     </figcaption>
+    </figure>
+<h2> Data de lançamento </h2>
+    <p> Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014. </p>
+<table id="tabela"> <!-- criar uma tabela com conteudo entre a tag. -->
+    <h2>Especificações Técnicas</h2> 
+    <!-- definir conteudo da  tag como um titulo ou subtitulo. -->
+<caption> Tabela Técnica do Google Glass <span>Mar/2013</span></caption>
+    <!-- configura o contexto da tag como legenda. -->
+<tr><td class="c1">Tela</td><td class="c2">Resolução equivalente a tela de 25"</td></tr>
+<tr><td class="c1" rowspan="2">Camera</td></td><td class="c2">5MP para fotos</td></tr>
+<tr><td class="c2">720p para vídeos</td></tr>
+<tr><td class="c1" rowspan="2">Conectividade</td><td class="c2">Wi-Fi</td></tr>
+<tr><td class="c2">Bluetooth</td></tr>
+<tr><td class="c1">Memória Interna</td><td class="c2">12GB</td></tr>
+</table>
+    <h2> Como funciona </h2>
+        <p> De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça. </p>
+    <h2> O que você pode fazer com o Google Glass </h2>
+        <p>  O vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-humano”, já que o aparelho pode indicar a quantos metros você está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz. </p>
+
+        <video id="videoAside" controls="controls">
+            <source src="../_media/one-day.mp4" type="video/mp4">
+            <source src="../_media/one-day.mp4" type="video/webm">
+            <source src="../_media/one-day.mp4" type="video/ogg">
+        </video>
+
+    </article>
+</section>
+    <aside id="lateral">
+        <!-- criar conteudo na lateral da pagina -->
+<h1>Outras Notícias</h1>
+<h2>Vídeo mais recente</h2>
+
+<video id="videoFimSection" controls="controls">
+    <source src="../_media/how-it-feels.mp4" type="video/mp4">
+    <source src="../_media/how-it-feels.mp4" type="video/webm">
+    <source src="../_media/how-it-feels.mp4" type="video/ogg">
+</video>
+
+<h2> Novidades no glass </h2>
+    <p> O <a href="http://google.com.br" target="_blank">Google</a> enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas usará um sistema de áudio baseado na transdução por condução. Através das hastes dos óculos, o som será transmitido para o ouvido do usuário por meio de microvibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto-falante. </p>
+                <!-- "href" coloca contexto como um link-->
+                <!-- "_blank" abre o link em uma nova aba-->
+<p> Além da surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção. Serão 640 x 360 pixels de resolução que, em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a 2,5 metros de distância do espectador. </p>
+    </aside>
+        <footer id="rodape"> 
+        <!-- definir conteudo da  tag como rodape. -->
+Copyright 2013 - by Gustavo Guanabara </br>
+
+<a href="http://facebook.com/cursosemvideo" target="_blank">Facebook</a> | <a href="http://twitter.com/cursosemvideo"target="_blank">Twitter</a>
+                <!-- "href" coloca contexto como um link-->
+                <!-- "_blank" abre o link em uma nova aba-->
+    </footer>
+</div>
+    </body>
+</html>

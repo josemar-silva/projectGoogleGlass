@@ -1,0 +1,421 @@
+@charset "UTF-8";
+/*padrao para conjuntode caracters regional*/
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+/*importar fontes atravez da Web*/
+@font-face{
+    font-family: 'fonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+    /*importar fontes atravez de arquivos de fonte*/
+}
+
+/*aqui sera feito comentarios!*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    /*colocar cor de fundo no contexto.*/
+    color: rgba(0, 0, 0,1);
+    /* As cores podem ser referenciadas pelo nome ou codigos rgb, rgba etc...*/
+}
+
+div#interface {
+    margin-top: -20;
+    /* configurar a margem superior*/
+    margin-left: auto;
+    /* configurar a margem a esquerda*/
+    margin-right: auto;
+  /* configurar a margem a direita*/
+    width: 1200px;
+    /*configurar largura do objeto.*/
+    padding: 20px;
+    /*configurar margen do contexto interno.*/
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .4);
+    /* criar sombra em volta do objeto (parametros a gosto).*/
+}   
+
+P {
+    text-align: justify;
+    /*ajustar texto conforme a pagina*/
+    text-indent: 50px;
+    /* O text-align pode variar o parametro deacordocom o contexto.*/   
+}
+
+header#cabecalho img#logo {
+    position: absolute;
+      /*definir posicao do objeto "absoluta ou relative.*/
+    left: 1240px;
+      /*difinir a distencia do objoto em relacao a margem direita.*/
+    top: 100px;
+    /*difinir a distencia do objoto em relacao a margem "top" de cima.*/
+}
+
+figure.foto_legenda {
+    position: relative;
+    /*define a poicao do objeto relativa ao codigo html.*/
+    border:8px solid white;
+    /*os parametros do border sao: largura(em pixels), tpo:(a seu gosto), cor:(a seu gosto)*/
+    box-shadow: 1px 1px 4px black;
+   /* criar sombra na borda (parametros a gosto).*/
+}
+
+figure.foto_legenda img {
+    width: 100%;
+    height: 100%;
+    /*Isso fara que a borda se adeque ao tamanho da imagem. */
+}
+
+figure.foto_legenda figcaption {
+    opacity: 0;
+    position: absolute;
+    /*colocar a legenda em posicao absoluta ao seu 'cotainer', no caso o foto_legenda*/
+    top: 0px;
+    /*margem de cima: posicao 0px*/
+    background-color: rgba(0, 0, 0,.4);
+    /*causar fundo com determinada transparencia*/
+    color: white;
+    /*cor da fonte*/
+    width: 100%;
+    height: 100%;
+    /*Isso fara que a transparencia se adeque ao tamanho da imagem. */
+    box-sizing: border-box;
+    /* criar um box dentro da borda e que limitara o conteudo ali dentro*/
+    transition: opacity 1.5s;
+    /*efeito de transicao no parametro 'opacity' com tempo de 1 segundo (tempo a seu gosto)*/
+}
+
+figure.foto_legenda:hover figcaption {
+    opacity: 100%;
+    /*quando o mouse passar pelo objeto 'foto_legenda', chama a classe hover no objeto que no caso é o 'figurecaption'*/
+}
+
+nav#menu h1{
+    display: none;
+    /*coloca o contexto em um bloco*/
+}
+
+nav#menu ul {
+    display: block;
+    /*esconde o conteudo(invisivel)*/
+    list-style: none;
+    /*retirar marcaçoes de uma lista*/
+    text-transform: uppercase;
+    /*colocar contexto em letras MAIUSCULAS*/
+    position: absolute;
+    /*posicao"relativa, limita o deslocamento ao bloco*/
+    /*posicção "bsoluta* limita o deslocamento a pagina.*/
+    top: -10px;
+    /*posiciona o contexto na pagina/na conteiner em questao*/
+    left: 200px;
+    /*posiciona o contexto na pagina/ partindo da esquerda*/
+}
+
+nav#menu li {
+    display: inline-block;
+    /*coloca o contexto em um bloco*/
+    background-color: #dddddd;
+    /*causar fundo*/
+    padding: 10px;
+    /*configura a margem interna no bloco*/
+    margin: 2px;
+    /*configura a margem externa no bloco*/
+}
+
+nav#menu li:hover {
+   /*"houver" efeito de transicao, passando mouse no objeto a ser modificado.*/
+    background-color: #606060;
+    /*cor de fundo*/
+    color: white;
+    /*cor de fonte*/
+    transition: .5s;
+    /*efeito de transicao no parametro 'opacity' com tempo em segundos (tempo a seu gosto)*/
+}
+
+nav#menu a {
+    color: black;
+    /*cor de fonte do contexto dentro da tag em questao*/
+    text-decoration: none;
+    /*retirar configuração do texto que exista em outras tags*/
+}
+
+nav#menu a:hover {
+    /*"houver" efeito de transicao, passando mouse no objeto a ser modificado.*/
+    color: white;
+ /*cor de fonte do contexto dentro da tag em questao*/
+    text-decoration: underline;
+    /*configuração do contexto para sublinhado*/
+}
+
+header#cabecalho {
+    border-bottom: 1px #606060 solid;
+    /*clriar borda na parte de aixo sendo osparametros 1px espessura da borda,
+     #606060 a cor e "solide o tipo de linha*/
+     height: 150px;
+     /*definir a distancia do top da pagina, ou a altura em que o objeto se encontra*/
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 90px;
+    /*definir uma imagem cmo plano de fundo de um objeto "no-repeat" para 
+    ela nao se replique, 0px e 80 px é para definir a distancia a esquerda e a direita*/
+}
+
+header#cabecalho h1{
+    font-family: 'fonteLogo', sans-serif ;
+    /*configurar tipo de fonte"podendo-se exportar a fonte*/
+    font-size: 30pt;
+    /*definir tamanho da fonte*/
+    color: #606060;
+    /*definir cor da fonte*/
+    text-shadow: 1px 1px 1px rgba(0, 0, 0,.6);
+    /*configurar efeito sombra na fonte*/
+    margin-bottom: 0px;
+    /*configurar margem inferior da fonte*/
+}
+
+header#cabecalho h2{
+    font-family: 'Titillium Web, sans-serif' ;
+    /*configurar tipo de fonte"podendo-se exportar a fonte*/
+    color: #88888888;
+    /*definir cor da fonte*/
+    font-size: 15pt;
+    /*definir tamanho da fonte*/
+    margin-top: 0px;
+     /*configurar margem inferior da fonte*/
+}  
+
+    section#corpo {
+        display: block;
+        /*coloca conteudo em bloco*/
+        width: 650px;
+         /*configurar largura do objeto.*/
+        float: left;
+        /*faz o bloco com conteudo flutuar, para que possamos trabalhar sua posicao*/
+        border-right:1px #666666 solid;
+        /* configurar a margem a direita, com parametros de largura,tipo, e cor*/
+        padding-right: 20px;    
+    }
+
+    aside#lateral {
+        padding: 10px;
+        margin-top: 10px;
+        background: #cecece;
+        margin-left: 0px;
+        /* configurar a margem esquerda, parametros em pixels (px)*/
+        display: block;
+        /*coloca conteudo em bloco*/
+        width: 500px;
+         /*configurar largura do objeto.*/
+         box-shadow: 2px 2px 2px rgba(0, 0, 0,.5);
+        float: right;
+         /*faz o bloco com conteudo flutuar, para que possamos trabalhar sua posicao*/
+    }
+
+footer#rodape {
+    clear: both;
+    /*coloca o rodape fora de toda a configuracao que possa deSlocalo do fim da pagina*/
+    border-top:1px #666666 solid;
+    /* criar uma borda superior com configuraçao em pixels*/
+    padding: 10px;
+    /* espacamento interno do objeto.*/
+    text-align: center;
+    /*centralizar conteudo.*/
+}   
+
+table#tabela {
+    border: 1px #606060 solid;
+    /* insrir bordas, parametros de largura, cor e tipo*/
+    border-spacing: 0px;
+    /* configurar espacos entre as celulas, parametros em px (pixels)*/
+    margin-left: auto;
+    /* configurar a margem a direita de forma automatica*/
+    margin-right: auto;
+    /* configurar a margem a esquerda de forma automatica*/  
+}
+
+    table#tabela td {
+        border: 1px solid #606060;
+        /*criar borda com cores e espessuras em pixels (px)*/
+        padding: 10px;
+        /*definir margem interna.*/
+    }   
+
+    table#tabela td.c1{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        /*mudar fonte do conteudo.*/
+        font-weight: bold;
+        /*colocar conteudo em negrito.*/
+        vertical-align: top;
+        /*configurar alinhamento para vertical para = superior (midle,bottom).*/
+        color: white;
+        /*cor da fonte.*/
+        background-color: rgb(125, 125, 128);
+        /*cor de fundo*/
+        text-align: right;
+        /*alinhar conteudo a dirita.*/
+    }
+
+    table#tabela td.c2{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+         /*mudar fonte do conteudo.*/
+        background: #88888888
+        /*cor de fundo*/        
+    }
+
+    table#tabela  caption {
+        color: #88888888;
+         /*mudar cor da fonte.*/
+        font-size: 13pt;
+         /*mudar tamanho fonte.*/
+        font-weight: bolder;
+         /*clolocar font em negrito.*/
+    }
+
+    table#tabela caption span {
+        color: black;
+        /*mudar cor da fonte.*/
+        font-size: 8pt;
+        /*mudar tamanho fonte.*/
+        display: block;
+        /*colocar conteudo em bloco.*/
+        margin-top: 10px;
+        /*definir alinamento da margem superior.*/
+        float: right;
+        /*colocar bloco flutuando para definir sua localidade no conteiner.*/
+    }
+
+    article#noticia_principal h2 {
+        font-size: 12pt;
+        /*mudar tamanho fonte.*/
+        color: #606060;
+        /*mudar cor da fonte.*/
+        background: #b9b8b8;
+        /*cor de fundo*/
+        padding: 5px 0px 5px 10px;
+        /*definir margem interna.*/
+    }
+
+    section#corpo header#cabecalho_artigo h1 {
+        font-family: 'fonteLogo', sans-serif ;
+        /*mudar fonte do conteudo.*/
+        font-size: 20pt;
+        /*mudar tamanho fonte.*/
+        color: #606060;
+         /*mudar cor da fonte.*/
+         margin-bottom: 0px;
+         /*definir alinamento da margem inferior.*/
+         margin-top: 0px;
+        /*definir alinamento da margem superior.*/
+    }
+    
+    section#corpo header#cabecalho_artigo h2 {
+        font-size: 13pt;
+        /*mudar tamanho fonte.*/
+        color: #929191;
+        /*mudar cor da fonte.*/
+        background: none;
+        /*cor de fundo*/
+        margin-top: 0px;
+        /*definir alinamento da margem superior.*/
+    }
+
+    section#corpo header#cabecalho_artigo h3 {
+        font-size: 13px;
+        /*mudar tamanho fonte.*/
+        color: #606060;
+        /*mudar cor da fonte.*/
+    }
+    .direita {
+        text-align: right;
+        /*definir alinamento da margem à direita.*/
+    }
+
+    a {
+        color: #606060;
+        /*mudar cor da fonte.*/
+        text-decoration: none;
+        /*retirar formatação de texto do conteuso referente a tag.*/
+    }
+
+    a:hover {
+        /*"houver" efeito de transicao, passando mouse no objeto a ser modificado.*/
+        color: blue;
+        /*mudar cor da fonte ao passar o mouse pelo texto referente a tag.*/
+    }
+
+    aside#lateral h1 {
+        font-family: 'fonteLogo', sans-serif ;
+        /*mudar fonte do conteudo.*/
+        margin-top: 0px;
+        /*definir alinamento da margem superior.*/
+        margin-bottom: 0px;
+        /*definir alinamento da margem inferior.*/
+        font-size: 20pt;
+        /*mudar tamanho fonte.*/
+        color: #606060
+        /*mudar cor da fonte.*/
+    }
+
+    aside#lateral h2 {
+        background: #606060;
+        /*cor de fundo*/
+        font-size: 13pt;
+        /*mudar tamanho fonte.*/
+        color: #ffffff;
+        /*mudar cor da fonte.*/
+        padding: 5px; 
+        /*definir margem interna.*/  
+    }
+
+    article#noticia_principal h2 {
+        font-size: 12pt;
+        /*mudar tamanho fonte.*/
+        color: #606060;
+        /*mudar cor da fonte.*/
+        background: #b9b8b8;
+        /*cor de fundo*/
+        padding: 5px 0px 5px 10px;
+        /*definir margem interna.*/
+    }
+
+    section#corpo-full {
+        
+        padding-right: 20px;
+    }
+
+    section#corpo-full header#cabecalho_artigo h1 {
+        font-family: 'fonteLogo', sans-serif ;
+        /*mudar fonte do conteudo.*/
+        font-size: 20pt;
+        /*mudar tamanho fonte.*/
+        color: #606060;
+         /*mudar cor da fonte.*/
+         margin-bottom: 0px;
+         /*definir alinamento da margem inferior.*/
+         margin-top: 0px;
+        /*definir alinamento da margem superior.*/
+    }
+    
+    section#corpo-full header#cabecalho_artigo h2 {
+        font-size: 13pt;
+        /*mudar tamanho fonte.*/
+        color: #929191;
+        /*mudar cor da fonte.*/
+        background: none;
+        /*cor de fundo*/
+        margin-top: 0px;
+        /*definir alinamento da margem superior.*/
+    }
+
+    section#corpo-full header#cabecalho_artigo h3 {
+        font-size: 13px;
+        /*mudar tamanho fonte.*/
+        color: #606060;
+        /*mudar cor da fonte.*/
+    }
+    
+    video#videoFimSection {
+        margin-left: 40px;
+        border-bottom: rgba(0, 0, 0,.6);
+    }
+
+    video#videoAside {
+        margin-left: 40px;
+        border-bottom: rgba(0, 0, 0,.6);
+    }

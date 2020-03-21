@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+section#conteudo {
+    width: 1000px;
+    /*definir a largura.*/
+    margin: auto;
+/*definir a margem externa como automatica.*/
+}
+
+iframe#frame-spec {
+    
+    width: 450px;
+    /*definir a largura.*/
+    height: 280px;
+    /*definir a altura.*/
+    border: none;
+    /*remover a borda.*/
+    overflow: hidden;
+    /*evitar que rolagem do conteudo aconteça (nao funciona em todos navegadores).*/
+}
+
+iframe#frame-spec::-webkit-scrollbar{
+     /* esconder o display e as barras de rolagens do dispaly.*/
+    display: none;
+    /* esconder o display e as barras de rolagens do dispaly.*/
+}
