@@ -1,11 +1,14 @@
 @charset "UTF-8";
 
 form {
-    width: 500px;
+    text-align: left;
+    width: 700px;
     margin: auto;
 }
 
 input, textarea{
+    margin: 10px;
+    text-align: left;
     font-family: sans-serif;
     font-weight: normal;
     font-size: 13pt;
@@ -22,9 +25,12 @@ legend {
     font-family: sans-serif;
 }
 
-fieldset {
+fieldset, label{
+    display: block;
+    text-align: left;
     border-color: #cecece;
-    margin: 20px;
+    margin: 5px;
+    box-sizing: border-box;
 }
 
 fieldset#sexo {
@@ -32,20 +38,24 @@ fieldset#sexo {
 }
 
 fieldset#usuario {
+    text-align: left;
     background: url("../_imagens/icone-contato.png") no-repeat 95% 95%; 
 }
 
 fieldset#endereco {
+    text-align: left;
     background: url("../_imagens/icone-endereco.png") no-repeat 95% 95%;
     padding-right: 15px;
 
 }
 fieldset#mensagem {
+    text-align: left;
     background: url("../_imagens/icone-mensagem.png") no-repeat 95% 95%;
     padding-right: 80px;
 }
 
 fieldset#pedido {
+    text-align: left;
     background: url("../_imagens/icone-pagamento.png") no-repeat 95% 95%;
 }
 

@@ -23,9 +23,9 @@ configuracao de estilo dentro do html usando uma tag "<p style="...">"contexto"<
     <script language="javascript" src="_javascript/funcoes.js"></script>
     <script>
         function calc_total(){
-            var qtd = parseInt(document.getElementById('cQtd').value);
+            var qtd = parseInt(document.getElementById("cQtd").value);
             var tot = qtd * 1500;
-            document.getElementById('cTot').value = tot;
+            document.getElementById("cTot").value = tot;
         }
     </script>
     <!-- <script>
@@ -87,24 +87,25 @@ configuracao de estilo dentro do html usando uma tag "<p style="...">"contexto"<
  
     <fieldset id="usuario"> 
         <legend>Identificação do Usuário</legend>
-    <p>Nome: <input type="text" name="tName" id="cName" size="50" maxlength="60" placeholder="Nome Completo" autofocus></p>
-    <p>Senha: <input type="password" name="tSenha" id="cSenha" size="8" maxlength="6" placeholder="6 digitos"></p>
-    <p>E-mail: <input type="email" name="tMail" id="cMail" size="50" maxlength="100" placeholder=" E-mail"></p>
+    <label>Nome:
+        <input type="text" name="tName" id="cName" size="40" maxlength="60" placeholder="Nome Completo" autofocus></label>
+    <label>Senha:
+        <input type="password" name="tSenha" id="cSenha" size="8" maxlength="6" placeholder="6 digitos"></label>
+    <label>
+        E-mail: <input type="email" name="tMail" id="cMail" size="40" maxlength="100" placeholder=" E-mail"></label>
     
     <fieldset id="sexo">
-        <legend>Sexo:</legend>
-            <input type="radio" name="tSexo" id="cMasc" checked value="M"><label for="cMasc" >Masculino</label></imput><br>
+        <legend>Sexo:</legend> <input type="radio" name="tSexo" id="cMasc" checked value="M"><label for="cMasc" >Masculino</label></imput><br>
             <input type="radio" name="tSexo" id="cFem" value="F"><label for="cFem">Feminino</label></input>
     </fieldset>
-    <p>Data de Nascimento: <input type="date" name="tNasc" id="cNasc"></p>
+    <label>Data de Nascimento: <input type="date" name="tNasc" id="cNasc"></label>
     </fieldset>
 
 <fieldset id="endereco">
     <legend>Endereço do Usuário</legend>
-    <p>Logradouro: <input type="text" name="tRua" id="cRua" size="50" maxlength="80" placeholder="Rua, Quadra, Lote..."> </p>
-    <p>Número: <input type="number" name="tNum" id="cNum" min="0" max="9999" placeholder="0"></p>
-    <p><label for="cEst">Estado:</label> 
-<select name="tEst" id="cEst">
+    <label>Logradouro: <input type="text" name="tRua" id="cRua" size="50" maxlength="80" placeholder="Rua, Quadra, Lote..."> </label>
+    <label>Número: <input type="number" name="tNum" id="cNum" min="0" max="9999" placeholder="0"></label>
+    <label for="cEst">Estado: <select name="tEst" id="cEst">
         <option value="RJ">Rio de Janeiro</option>
         <option value="SP">São Paulo</option>
         <option value="MG">Minas Gerais</option>
@@ -116,8 +117,8 @@ configuracao de estilo dentro do html usando uma tag "<p style="...">"contexto"<
         <option value="PI">Piauí</option>
         <option value="AC">Acre/option>
         <option value="ES">Epirito Santo</option>
-</select></p>
-    <p><label for="cCid">Cidade:</label>
+</select></label>
+    <label for="cCid">Cidade:
     <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
 <datalist id="cidades">    
         <option>Rio Branco</option>
@@ -130,29 +131,25 @@ configuracao de estilo dentro do html usando uma tag "<p style="...">"contexto"<
         <option>Palmas</option>
         <option>Vitória</option>
         <option>Porto Seguro</option>
-         <option>Fortaleza</option>
-         <option>Terezina</option>
+        <option>Fortaleza</option>
+        <option>Terezina</option>
     </datalist>
-</fieldset>
+</fieldset> 
+</label>
 
 <fieldset id="mensagem">
     <legend>Mensagem do Usuário</legend>
-    <p><label for="cUrg"> de Urgência:</label>
-    Min <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"> Max</p>
-    <p><label for="cMsg">Mensagem:</label>
-        <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Digite sua mensagem!"></textarea></p>
+    <label for="cUrg"> Grau de Urgência: Min <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"> Max</label>
+    <label for="cMsg">Mensagem: <p></p><textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Digite sua mensagem!"></textarea></p></label>
 </fieldset>
 
 <fieldset id="pedido">
     <legend>Quero um Google Glass</legend>
-    <p> <input type="checkbox" name="tPed" id="cPed" checked>
-        <label for="cPed">"Gostaria de adquirir um Google Glass quando disponível</label></p>
-    <p><label for="cCor">Cor:</label></label>
-    <input type="color" name="tCor" id="cCor" value="#0000FF"></p>
-    <p><label for="cQtd">Quantidade:</label>
-    <input type="number" name="tNum" id="cNum" min="0" max="10" value="0"></p>
-    <p><label for="cTot"> "Preço Total: R$ </label></label>
-    <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly></p>
+    <label><input type="checkbox" name="tPed" id="cPed" checked> "Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <label for="cCor">Cor: <input type="color" name="tCor" id="cCor" value="#0000FF"></label>
+    <label for="cQtd">Quantidade: <input type="number" name="tQtd" id="cQtd" min="0" max="10" value="0"></label>
+    <label for="cTot"> "Preço Total: R$
+    <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly></label>
 </fieldset>
 
 <!--<input type="submit" value="Enviar"><br/> <br/> -->
