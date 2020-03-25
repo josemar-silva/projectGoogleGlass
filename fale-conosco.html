@@ -87,7 +87,7 @@ configuracao de estilo dentro do html usando uma tag "<p style="...">"contexto"<
  
     <fieldset id="usuario"> 
         <legend>Identificação do Usuário</legend>
-    <p>Nome: <input type="text" name="tName" id="cName" size="50" maxlength="60" placeholder="Nome Completo"></p>
+    <p>Nome: <input type="text" name="tName" id="cName" size="50" maxlength="60" placeholder="Nome Completo" autofocus></p>
     <p>Senha: <input type="password" name="tSenha" id="cSenha" size="8" maxlength="6" placeholder="6 digitos"></p>
     <p>E-mail: <input type="email" name="tMail" id="cMail" size="50" maxlength="100" placeholder=" E-mail"></p>
     
@@ -105,33 +105,33 @@ configuracao de estilo dentro do html usando uma tag "<p style="...">"contexto"<
     <p>Número: <input type="number" name="tNum" id="cNum" min="0" max="9999" placeholder="0"></p>
     <p><label for="cEst">Estado:</label> 
 <select name="tEst" id="cEst">
-        <option>RJ</option>
-        <option>SP</option>
-        <option>MG</option>
-        <option selected>GO</option>
-        <option>DF</option>
-        <option>TO</option>
-        <option>BA</option>
-        <option>CE</option>
-        <option>PI</option>
-        <option>AC</option>
-        <option>ES</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="SP">São Paulo</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="GO" selected>Goias</option>
+        <option value="DF">Distrito Federel</option>
+        <option value="TO">Tocantins</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="PI">Piauí</option>
+        <option value="AC">Acre/option>
+        <option value="ES">Epirito Santo</option>
 </select></p>
     <p><label for="cCid">Cidade:</label>
     <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
 <datalist id="cidades">    
-        <option value="Rio Branco"></option>
-        <option value="Rio de Janeiro"></option>
-        <option value="São Paulo"></option>
-        <option value="Minas Gerais"></option>
-        <option value="Vitória"></option>
-        <option value="Goiânia"></option>
-        <option value="Distrito Federal"></option>
-        <option value="Palmas"></option>
-        <option value="Vitória"></option>
-        <option value="Porto Seguro"></option>
-         <option value="Fortaleza"></option>
-         <option value="Terezina"></option>
+        <option>Rio Branco</option>
+        <option>Rio de Janeiro</option>
+        <option>São Paulo</option>
+        <option>Minas Gerais</option>
+        <option>Vitória</option>
+        <option>Goiânia</option>
+        <option>Distrito Federal</option>
+        <option>Palmas</option>
+        <option>Vitória</option>
+        <option>Porto Seguro</option>
+         <option>Fortaleza</option>
+         <option>Terezina</option>
     </datalist>
 </fieldset>
 
