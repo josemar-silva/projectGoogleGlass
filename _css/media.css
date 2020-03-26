@@ -11,14 +11,14 @@ audio#musica {
     display: block;
     position: relative;
     left: 575px;
-    top: 495px;
+    top: 490px;
     width: 300px;
 }
 
 video#filme {
     display: block;
     position: relative;
-    left: 80px;
-    top: 75px;
-    width: 460px;
+    left: 85px;
+    top: 70px;
+    width: 450px;
 }

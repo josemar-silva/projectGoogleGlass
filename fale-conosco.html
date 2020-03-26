@@ -88,24 +88,25 @@ configuracao de estilo dentro do html usando uma tag "<p style="...">"contexto"<
     <fieldset id="usuario"> 
         <legend>Identificação do Usuário</legend>
     <label>Nome:
-        <input type="text" name="tName" id="cName" size="40" maxlength="60" placeholder="Nome Completo" autofocus></label>
+        <input type="text" name="tName" id="cName" size="40" maxlength="60" placeholder="Nome Completo" autofocus required></label>
     <label>Senha:
-        <input type="password" name="tSenha" id="cSenha" size="8" maxlength="6" placeholder="6 digitos"></label>
+        <input type="password" name="tSenha" id="cSenha" size="8" maxlength="6" placeholder="6 digitos" required></label>
     <label>
-        E-mail: <input type="email" name="tMail" id="cMail" size="40" maxlength="100" placeholder=" E-mail"></label>
+        E-mail: <input type="email" name="tMail" id="cMail" size="40" maxlength="100" placeholder=" E-mail" required></label>
     
-    <fieldset id="sexo">
-        <legend>Sexo:</legend> <input type="radio" name="tSexo" id="cMasc" checked value="M"><label for="cMasc" >Masculino</label></imput><br>
-            <input type="radio" name="tSexo" id="cFem" value="F"><label for="cFem">Feminino</label></input>
+    <fieldset class="sexo">
+        <legend>Sexo:</legend> 
+        <input type="radio" name="tSexo" id="cMasc" checked value="M"><label for="cMasc" >Masculino</label></imput><br>
+        <input type="radio" name="tSexo" id="cFem" value="F"><label for="cFem">Feminino</label></input>
     </fieldset>
-    <label>Data de Nascimento: <input type="date" name="tNasc" id="cNasc"></label>
+    <label>Data de Nascimento: <input type="date" name="tNasc" id="cNasc"required></label>
     </fieldset>
 
 <fieldset id="endereco">
     <legend>Endereço do Usuário</legend>
-    <label>Logradouro: <input type="text" name="tRua" id="cRua" size="50" maxlength="80" placeholder="Rua, Quadra, Lote..."> </label>
-    <label>Número: <input type="number" name="tNum" id="cNum" min="0" max="9999" placeholder="0"></label>
-    <label for="cEst">Estado: <select name="tEst" id="cEst">
+    <label>Logradouro: <input type="text" name="tRua" id="cRua" size="50" maxlength="80" placeholder="Rua, Quadra, Lote..." required> </label>
+    <label>Número: <input type="number" name="tNum" id="cNum" min="0" max="9999" placeholder="0" required></label>
+    <label for="cEst">Estado: <select name="tEst" id="cEst" required>
         <option value="RJ">Rio de Janeiro</option>
         <option value="SP">São Paulo</option>
         <option value="MG">Minas Gerais</option>
@@ -120,7 +121,7 @@ configuracao de estilo dentro do html usando uma tag "<p style="...">"contexto"<
 </select></label>
     <label for="cCid">Cidade:
     <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
-<datalist id="cidades">    
+<datalist id="cidades" required>    
         <option>Rio Branco</option>
         <option>Rio de Janeiro</option>
         <option>São Paulo</option>
@@ -145,7 +146,7 @@ configuracao de estilo dentro do html usando uma tag "<p style="...">"contexto"<
 
 <fieldset id="pedido">
     <legend>Quero um Google Glass</legend>
-    <label><input type="checkbox" name="tPed" id="cPed" checked> "Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <label><input type="checkbox" name="tPed" id="cPed" checked required> "Gostaria de adquirir um Google Glass quando disponível</label></p>
     <label for="cCor">Cor: <input type="color" name="tCor" id="cCor" value="#0000FF"></label>
     <label for="cQtd">Quantidade: <input type="number" name="tQtd" id="cQtd" min="0" max="10" value="0"></label>
     <label for="cTot"> "Preço Total: R$

@@ -7,7 +7,7 @@ section#conteudo {
 /*definir a margem externa como automatica.*/
 }
 
-iframe#frame-spec {
+.frame-spec{
     
     width: 450px;
     /*definir a largura.*/
@@ -19,8 +19,8 @@ iframe#frame-spec {
     /*evitar que rolagem do conteudo aconteça (nao funciona em todos navegadores).*/
 }
 
-iframe#frame-spec::-webkit-scrollbar{
-     /* esconder o display e as barras de rolagens do dispaly.*/
-    display: none;
+.frame-spec::-webkit-scrollbar-button{
+         display: none;
+         width: 0px;
     /* esconder o display e as barras de rolagens do dispaly.*/
 }
